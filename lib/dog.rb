@@ -21,7 +21,7 @@ class Dog
     sql = <<-SQL
         DROP TABLE dogs
         )
-        SQL
+      SQL
     DB[:conn].execute(sql)
   end
 end
