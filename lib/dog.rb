@@ -61,5 +61,9 @@ class Dog
     dog = DB[:conn].execute("SELECT * FROM songs WHERE name = ? AND breed = ?", name:, breed:)
     if !dog.empty?
       self.new_from_db(dog)
+    else 
+      dog = self.create(hash)
+    end 
+    dog 
   end
 end
