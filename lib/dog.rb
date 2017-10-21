@@ -60,10 +60,9 @@ class Dog
   def self.find_or_create_by(hash)
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", hash[:name], hash[:breed])
     if !dog.empty?
-      dog = self.new_from_db(dog)
+      self.new_from_db(dog)
     else
-      dog = self.create(hash)
+      self.create(hash)
     end
-    dog
   end
 end
