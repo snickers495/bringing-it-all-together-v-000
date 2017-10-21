@@ -51,7 +51,6 @@ class Dog
             SQL
     result = DB[:conn].execute(sql, id)[0]
     Dog.new_from_db(result)
-
   end
 
   def self.new_from_db(row)
