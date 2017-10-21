@@ -48,6 +48,6 @@ class Dog
             SELECT * FROM dogs WHERE id = ?
             SQL
     result = DB[:conn].execute(sql, self.id)[0]
-    Dog.new(result[1], result[2], result[0])
+    Dog.new(name: result[1], breed: result[2], id: result[0])
   end
 end
