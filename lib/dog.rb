@@ -51,6 +51,6 @@ class Dog
             SQL
     result = DB[:conn].execute(sql, id)[0]
     Dog.new(result[1], result[2], result[0])
-    
+
   end
 end
