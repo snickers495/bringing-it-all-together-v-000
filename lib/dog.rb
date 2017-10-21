@@ -24,4 +24,14 @@ class Dog
         SQL
     DB[:conn].execute(sql)
   end
+
+  def save 
+  end 
+
+  def self.create
+  end
+
+  def self.find_by_id(id)
+
+  end 
 end
